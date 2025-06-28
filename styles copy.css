@@ -125,7 +125,7 @@ body {
 /* Mobile Hero */
 @media (max-width: 768px) {
   .hero {
-    background: url('images/heromobile.svg') center/cover no-repeat;
+    background: url('images/heromobile.png') center/cover no-repeat;
   }
 }
 
