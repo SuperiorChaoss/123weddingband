@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | 123 Plus Wedding & Party Band</title>
+  <link rel="stylesheet" href="styles copy.css">
+  <style>
+    /* Photo background behind Hero */
+    .services-hero {
+      background: url('images/services-bg.jpg') center/cover no-repeat;
+      position: relative;
+      padding: 4rem 0;
+      color: #fff;
+    }
+    .services-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .services-hero .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .services-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #ffd700;
+    }
+    .services-hero p {
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: auto;
+      color: #eee;
+    }
+
+    /* Simplified Package Cards */
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 4rem 0;
+    }
+    .package-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .package-header {
+      background: rgba(0,0,0,0.4);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .package-header h3 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      color: #ffd700;
+    }
+    .package-header .price {
+      margin-top: 0.5rem;
+      font-size: 1.25rem;
+      color: #fff;
+      font-weight: bold;
+    }
+    .package-body {
+      padding: 1.5rem;
+      color: #ddd;
+      font-size: 0.95rem;
+      flex-grow: 1;
+    }
+    .package-body ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .package-body li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    .package-body li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #ffd700;
+    }
+    .package-footer {
+      padding: 1rem 1.5rem;
+      background: rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    .package-footer a {
+      text-decoration: none;
+      color: #ffd700;
+      font-weight: 600;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">123 Plus</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="gallery.html">Projects</a></li>
+        <li><a href="index.html#contact" class="btn btn-nav">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Services Hero with Photo BG -->
+  <section class="services-hero section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>Live music that elevates every moment—tailored for weddings, parties & special events. Let’s talk through your vision.</p>
+    </div>
+  </section>
+
+  <!-- Simplified Packages Grid -->
+  <section class="packages container">
+
+    <!-- Ceremony Package -->
+    <div class="package-card">
+      <div class="package-header">
+        <h3>Ceremony Package</h3>
+        <div class="price">$600</div>
+      </div>
+      <div class="package-body">
+        <ul>
+          <li>Solo keyboardist OR acoustic guitarist (setup $250)</li>
+          <li>Singer & keyboard OR saxophonist & keyboard ($750/hr)</li>
+          <li>4-hour performance time</li>
+        </ul>
+      </div>
+      <div class="package-footer">
+        <a href="index.html#contact">Book a Call</a>
+        <a href="gallery.html">View Gallery</a>
+      </div>
+    </div>
+
+    <!-- Duo Package -->
+    <div class="package-card">
+      <div class="package-header">
+        <h3>Duo Package</h3>
+        <div class="price">$1,000</div>
+      </div>
+      <div class="package-body">
+        <ul>
+          <li>Singer + guitarist + keyboardist OR singer + sax + keyboard</li>
+          <li>4-hour performance time</li>
+        </ul>
+      </div>
+      <div class="package-footer">
+        <a href="index.html#contact">Book a Call</a>
+        <a href="gallery.html">View Gallery</a>
+      </div>
+    </div>
+
+    <!-- Three-Piece Package -->
+    <div class="package-card">
+      <div class="package-header">
+        <h3>Three-Piece Package</h3>
+        <div class="price">$1,400</div>
+      </div>
+      <div class="package-body">
+        <ul>
+          <li>Drums, bass & singer/guitarist/keyboardist</li>
+          <li>4-hour performance time</li>
+        </ul>
+      </div>
+      <div class="package-footer">
+        <a href="index.html#contact">Book a Call</a>
+        <a href="gallery.html">View Gallery</a>
+      </div>
+    </div>
+
+    <!-- Full Band Package -->
+    <div class="package-card">
+      <div class="package-header">
+        <h3>Full Band Package</h3>
+        <div class="price">$11,800</div>
+      </div>
+      <div class="package-body">
+        <ul>
+          <li>Drummer, bass guitarist, lead guitarist</li>
+          <li>2 keyboardists, trumpet, saxophonist, trombonist, percussionist</li>
+          <li>4 vocalists & 4-hour performance</li>
+        </ul>
+      </div>
+      <div class="package-footer">
+        <a href="index.html#contact">Book a Call</a>
+        <a href="gallery.html">View Gallery</a>
+      </div>
+    </div>
+
+    <!-- Extended Band Package -->
+    <div class="package-card">
+      <div class="package-header">
+        <h3>Extended Band Package</h3>
+        <div class="price">$15,000</div>
+      </div>
+      <div class="package-body">
+        <ul>
+          <li>Everything in Full Band</li>
+          <li>Plus extended horn section</li>
+          <li>4-hour performance with lighting & sound</li>
+        </ul>
+      </div>
+      <div class="package-footer">
+        <a href="index.html#contact">Book a Call</a>
+        <a href="gallery.html">View Gallery</a>
+      </div>
+    </div>
+
+    <!-- Premium Band Package -->
+    <div class="package-card">
+      <div class="package-header">
+        <h3>Premium Band Package</h3>
+        <div class="price">$18,000</div>
+      </div>
+      <div class="package-body">
+        <ul>
+          <li>Everything in Extended Band</li>
+          <li>Exclusive setlist & extra performance hour</li>
+          <li>Professional MC & special effects</li>
+        </ul>
+      </div>
+      <div class="package-footer">
+        <a href="index.html#contact">Book a Call</a>
+        <a href="gallery.html">View Gallery</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Call to Action -->
+  <section id="transform-cta">
+    <div class="transform-bg">
+      <div class="transform-panel container">
+        <h2>Ready to Discuss Your Event?</h2>
+        <p>No menus, no surprises—just a quick call to craft your ideal live soundtrack.</p>
+        <a href="index.html#contact" class="btn btn-primary">Schedule a Call</a>
+        <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 123 Plus Wedding & Party Band. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -25,26 +25,44 @@
 
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="#contact" class="btn btn-nav">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>
-        <span class="heading-main">The Real Live Band Experience.</span><br>
-        <span class="heading-sub"><em>Celebrating Love & Joy.</em></span>
-      </h1>
-      <p>
-       Live music that turns weddings, parties, and special events into unforgettable celebrations.
-      </p>
-      <a href="#contact" class="btn btn-hero">Book A Free Consultation</a>
-    </div>
-  </header>
+<!-- Hero -->
+<header class="hero">
+  <!-- Video Background -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="videos/hero.mp4" type="video/mp4">
+    <!-- fallback text -->
+  </video>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <h1>
+      <span class="heading-main">The Real Live Band Experience.</span><br>
+      <span class="heading-sub"><em>Celebrating Love & Joy.</em></span>
+    </h1>
+    <p>
+      Live music that turns weddings, parties, and special events into unforgettable celebrations.
+    </p>
+    <a href="#contact" class="btn btn-hero">Book A Free Consultation</a>
+
+    <!-- Music Toggle -->
+    <button id="music-toggle" class="btn-audio" aria-label="Toggle Music">
+      🔇
+    </button>
+  </div>
+
+  <!-- Background Music (separate from video) -->
+  <audio id="bg-music" loop>
+    <source src="videos/hero.mp4" type="audio/mp4">
+  </audio>
+</header>
+
 
 
   <!-- About -->
@@ -292,6 +310,22 @@
       navLinks.classList.remove('open');
     });
   });
+});
+
+// Toggle background music on/off
+const musicBtn = document.getElementById('music-toggle');
+const bgMusic  = document.getElementById('bg-music');
+let musicOn = false;
+
+musicBtn.addEventListener('click', () => {
+  musicOn = !musicOn;
+  if (musicOn) {
+    bgMusic.play();
+    musicBtn.textContent = '🔊';
+  } else {
+    bgMusic.pause();
+    musicBtn.textContent = '🔇';
+  }
 });
 
   </script>
